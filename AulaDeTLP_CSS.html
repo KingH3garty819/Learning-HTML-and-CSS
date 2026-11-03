@@ -153,10 +153,174 @@
             gap: 25px;
         }
 
+        .card{
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+            transition: transform 0.3s ease,
+             box-shadow 0.3s ease;
+        }
+
+        .card:hover{
+            transform: translateY(-8px);
+
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.16);
+        }
+
+        .imagem-card{
+            height: 180px;
+
+            background-image:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #2563eb,
+                    #9333ea
+                );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .imagem-verde{
+            background-image:
+                linear-gradient(
+                    135deg,
+                    #059669,
+                    #a3e635
+                );
+        }
+
+        .imagem-laranja{
+            linear-gradient(
+                135deg,
+                #ea580c,
+                #facc15
+            );
+        }
+
+        .conteudo-card{
+            padding: 22px;
+        }
+
+        .categoria{
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .conteudo-card h3{
+            margin: 10px 0;
+            font-size: 21px;
+        }
+
+        .conteudo-card p{
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .botao{
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            transition:
+            background-color 0.3s ease,
+            transform 0.3s ease;
+        }
+
+        .botao:hover{
+            background-color: #7c3aed;
+            transform: scale(1.05);
+        }
+
+        /*COLUMNS: TEXTO EM COLUNAS*/
+
+        .texto-colunas p{
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /*DEMONSTRACAO DE GRADIENTES*/
+
+        .gradientes{
+            display: grid;
+            grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+        .gradiente{
+            min-height: 150px;
+            border-radius: 14px;
+            padding: 20px;
+
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-weight: bold;
+            font-align: center;
+
+            box-shadow: 0 5px 15px #0002;
+        }
+
+        .linear{
+            background: linear-gradient(
+                to right,
+                #2563eb,
+                #9333ea
+            );
+        }
+
+        .radial{
+            background: radial-gradient(
+                circle,
+                #fef08a,
+                #f97316,
+                #991b1b
+            );
+        }
+
+        .conico{
+            background: conic-gradient(
+                #ef4444,
+                #facc15,
+                #22c55e,
+                #3b82f6,
+                #9333ea,
+                #ef4444
+            ),
+        }
+
+        /*MULTIPLOS BACKGROUNDS*/
+
+        .background
 
     </style>
+
 </head>
+
 <body>
+
+
     
 </body>
+
 </html>
