@@ -7,6 +7,151 @@
 
     <style>
         
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            color: #1e293b;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f1f5f9;
+        }
+
+        img{
+            max-width: 100%;
+            display: block;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section{
+            padding: 55px 0;
+            scroll-margin-top: 80px;
+        }
+
+        .titulo{
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .descricao{
+            text-align: center;
+            margin: -15px auto 30px;
+            max-width: 650px;
+            color: #64748b;
+        }
+
+
+
+        .site{
+            display: grid;
+            grid-template-areas:
+            "header"
+            "nav"
+            "conteudo"
+            "footer";
+
+            grid-template-columns: 1fr;
+            min-height: 100vh;
+        }
+
+        header{
+            grid-area: header;
+        }
+
+        nav{
+            grid-area: nav;
+        }
+
+        main{
+            grid-area: conteudo;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+
+        /*CABECALHO E GRADIENTE*/
+
+        .cabecalho{
+            background-image: 
+            radial-gradient(
+                circle at top right,
+                rgba(255, 255, 255, 0.25),
+                transparent 35%
+             ),
+             linear-gradient(
+                135deg,
+                #0f172a,
+                #2563eb,
+                #7c3aed
+             );
+
+             color: white;
+             text-align: center;
+             padding: 65px 20px,
+        }
+
+        .cabecalho h1{
+            font-size: clamp(28px, 5vw, 45px);
+            margin-bottom: 10px;
+        }
+
+        .cabecalho p{
+            font-size: 17px;
+        }
+
+        /*MENU DE NAVEGACAO*/
+
+        .menu{
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 12px;
+        }
+
+        .menu a{
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+
+            transition:
+             background-color 0.3s ease,
+             color 0.3s ease;
+        }
+
+        .menu a:hover{
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        /*CARDS MODERNOS*/
+
+        .cards{
+            display: grid;
+            grid-template-columns: 
+            repeat(3, minmax(0, 1fr));
+
+            gap: 25px;
+        }
 
 
     </style>
