@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Layout Completo</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: monospace;
+            background-color: white;
+        }
+
+        h1{
+            margin: 5px;
+            color: black;
+            text-align: center;
+        }
+
+        hr{
+            color: blueviolet;
+        }
+
+        header{
+            background-color: darkorchid;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav{
+            background-color: rgb(54, 54, 178);
+            padding: 15px;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: 0.5s;
+        }
+
+        nav a:hover{
+            background-color: white;
+            color: rgb(54, 54, 178);
+            border-radius: 5px;
+        }
+
+        .banner{
+            height: 300px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: rgb(54, 54, 178);
+            font-weight: bold;
+        }
+
+        .container{
+            display: flex;
+            gap: 20px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .conteudo{
+            flex: 3;
+        }        
+
+        .sidebar{
+            flex: 0.5;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            height: fit-content;
+            border: 3px solid white;
+
+        }
+
+        .sidebar:hover{
+            transform: scale(1.01);
+            transition: 0.1s;
+        }
+
+        .card{
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .card:hover{
+            transform: scale(1.02);
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .card h2{
+            color: rgb(54, 54, 178);
+            margin-bottom: 10px;
+        }
+
+        .card p{
+            line-height: 25px;
+            text-align: justify;
+        }
+
+        .botao{
+            display: inline-block;
+            margin-top: 15px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        .botao:hover{
+            background-color: rgb(54, 54, 178);
+        }
+
+        footer{
+            background-color: purple;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+    </style>       
+
+
+</head>
+
+<body>
+    
+<header>
+
+    <h1>My website</h1>
+
+    <p>Complete layout using HTML and CSS</p>
+
+</header>
+
+<nav>
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+
+        <li>
+            <a href="#">About</a>
+        </li>
+
+        <li>
+            <a href="#">Services</a>
+        </li>
+
+        <li>
+            <a href="#">Contacts</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="banner">Welcome to my website</div>
+
+<div class="container">
+    <div class="conteudo">
+        <div class="card">
+            <h2>HTML</h2>
+
+            <p>HTML is a language used to create the structure of webpages</p>
+
+            <a href="#" class="botao">Read More</a>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+
+            <p>CSS is used to estilize pages, adding colors, layouts and animations</p>
+
+            <a href="#" class="botao">Read More</a>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+
+            <p>JavaScript add interactivite to webpages</p>
+
+            <a href="#" class="botao">Read More</a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="sidebar">
+        <h2 style="color: brown;">Sidebar</h2>
+        
+        <p>Lateral area of website</p>
+        <br>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Flexbox</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<footer>
+    <p>Developed with HTML and CSS</p>
+</footer>
+
+
+</body>
+
+</html>

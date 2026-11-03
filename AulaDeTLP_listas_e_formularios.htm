@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<!--Lista-->
+
+<table border="1.0">
+
+    <thead>
+        <tr>
+            <th>
+                id
+            </th>
+                <h1><b><u><i>Categoria</i></u></b></h1>
+            <th>
+                Preco
+            </th>
+            <th>
+                quantidade
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+
+    <tr>
+         <td>
+            Computador Gamer
+        </td>
+
+        <td>
+            2.000.000,00Kz
+        </td>
+        <td>
+            12
+        </td>
+
+    </tr>
+    </tbody>
+
+    <tfoot>
+        <tr><td colspan="4"><strong>Total de productos cadastrados</strong></td></tr>
+    </tfoot>ees
+
+</table>
+
+<br>
+<br>
+<br>
+
+<!--Formulario-->
+<hr>
+<h2>Formulario de cadastro</h2>
+<h3>Preencha abaixo</h3>
+
+<form action="method = past">
+
+    <fieldset>
+        <legend>Informacoes pessoais</legend>
+
+        <label for="nome">Name</label>
+        <br>
+
+        <input type="text" id="name" required placeholder="Sergio Capungo-Capungo" "Digite o seu nome">
+        <br>
+        <br>
+
+        <label for="email">Email</label> <br>
+        <input type="email"  id="email" name="Email_usuario" required placeholder="Exemplo.com">
+        <br>
+        <br>
+        
+        <label for="senha">Senha</label>
+        <br>
+
+        <input type="password" name="senha_usuario" id="senha" required placeholder="Senha" minlenght="6">
+        <br>
+        <br>
+        
+        <label for="nascimento">Data de nascimento</label>
+        <br>
+        <input type="date" name="Data_de_nascimento" id="nascimento">
+
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>
+            preferenciais
+            <input type="radio" name="genero" id="Genero_m" value="masculino">
+            <input type="radio" name="genero" id="Genero_f" value="feminino">
+            <input type="radio" name="genero" id="Genero_o" value="outro">
+        </legend>
+        <br>
+
+        <legend>Area de interesse</legend>
+        <input type="checkbox" name="interesse" id="interesse_tech" value="tecnologia">
+        <label for="interesse_tech">Tecnologia</label>
+        <input type="checkbox" name="ng" id="eng_informatica" value="eng_informatica">
+        <label for="eng_informatica">eng_informatica</label>
+        <br>
+        <br>
+        <legend>Estado Civil</legend>
+        <label for="estado"></label>
+        <select name="estado" id="estado">
+        <option value="solteiro">solteiro</option>
+        <option value="casado">casado</option>
+        <option value="viuvo(a)">viuvo(a)</option>
+        </select>
+        
+        <br>
+        <br>
+        <legend>Provincias</legend>
+        <select name="provincia" id="provincia">
+        <option value="Luanda">Luanda</option>
+        <option value="Huambo">Huambo</option>
+        <option value="Icolo e Bengo">Icolo e Bengo</option>
+        </select>
+        <br>
+        <br>
+        <legend></legend>
+        <label for="observacoes" id="observacoes">observacoes</label>
+        <br>
+        <textarea name="obs" id="observacoes">observacoes</textarea>
+        
+    </fieldset>
+
+    <button type="submit">Enviar o cadastro</button>
+    <button type="reset">Limpar o formulario</button>
+
+</form>
+<br><br><br><br>
+<hr>
+
+
+</body>
+</html>

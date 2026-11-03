@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas e esacamentos</title>
+
+    <style>
+
+        body{
+            background-color: white;
+            font-family: monospace;
+        }
+
+        .conteiner{
+            width: 700px;
+            margin: auto;
+        }
+
+        .caixa{
+            background-color: white;
+            border: 3px solid blue;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: justify;
+        }
+
+        .titulo{
+            text-align: center;
+            color: darkblue;
+        }
+
+        .botao{
+            background-color: green;
+            color: white;
+
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .botao:hover{
+            background-color: darkgreen;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    
+    <div class="container">
+        <h1 class="titulo">CSS classes</h1>
+
+        <div class="caixa">
+
+            <h2>Borders</h2>
+
+            <p>This box have a blue border, arrendondados corners and internal spacement.</p>
+
+            <button class="botao">Join</button>
+            
+        </div>
+
+        <div class="caixa">
+
+            <h2>Espacement</h2>
+
+            <p>The margin creates a external space and the padding creates internal space.</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

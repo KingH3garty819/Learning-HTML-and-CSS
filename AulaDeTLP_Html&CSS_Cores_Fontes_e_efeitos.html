@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores, fontes e efeitos</title>
+
+    <style>
+
+        body{
+            background-color: white;
+            font-family: monospace;
+            /*font-family: Arial*/
+        }
+
+        .container{
+            width: 500px;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .caixa{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid gray;
+        }
+
+        .titulo{
+            color: darkblue;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .texto{
+            font-size: 18px;
+            color: #333;
+        }
+
+        .texto:hover{
+            color: blue;
+        }
+
+        .botao{
+            background-color: green;
+            color: white;
+
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+
+            font-size: 18px;
+            transition: 0.25s;
+        }
+
+        .botao:hover{
+            background-color: darkgreen;
+            transform: scale(1.1);
+        }
+
+        .link{
+            text-decoration: none;
+            color: red;
+        }
+
+        .link:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+<div class="container">
+
+    <div class="caixa">
+        <h1 class="titulo">Aula CSS</h1>
+
+        <p class="texto">Passe o mouse neste texto.</p>
+
+        <button class="botao">Entrar</button>
+
+        <br><br>
+
+        <a href="#" class="link">Clique aqui</a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
