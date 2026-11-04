@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecto Completo de CSS</title>
+
+    <style>
+        /* =====================================
+           1. CONFIGURAÇÕES GERAIS
+        ===================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f1f5f9;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            padding: 55px 0;
+            scroll-margin-top: 80px;
+        }
+
+        .titulo-seccao {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .descricao {
+            text-align: center;
+            margin: -15px auto 30px;
+            max-width: 650px;
+            color: #64748b;
+        }
+
+
+        /* =====================================
+           2. TEMPLATE LAYOUT COM CSS GRID
+        ===================================== */
+
+        .site {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "nav"
+                "conteudo"
+                "footer";
+
+            grid-template-columns: 1fr;
+            min-height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: conteudo;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+
+        /* =====================================
+           3. CABEÇALHO E GRADIENTE
+        ===================================== */
+
+        .cabecalho {
+            background-image:
+                radial-gradient(
+                    circle at top right,
+                    rgba(255, 255, 255, 0.25),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #2563eb,
+                    #7c3aed
+                );
+
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .cabecalho h1 {
+            font-size: clamp(28px, 5vw, 45px);
+            margin-bottom: 10px;
+        }
+
+        .cabecalho p {
+            font-size: 17px;
+        }
+
+
+        /* =====================================
+           4. MENU DE NAVEGAÇÃO
+        ===================================== */
+
+        .menu {
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 12px;
+        }
+
+        .menu a {
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+
+        /* =====================================
+           5. CARDS MODERNOS
+        ===================================== */
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.16);
+        }
+
+        .imagem-card {
+            height: 180px;
+
+            background-image:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #9333ea
+                );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .imagem-verde {
+            background-image:
+                linear-gradient(
+                    135deg,
+                    #059669,
+                    #a3e635
+                );
+        }
+
+        .imagem-laranja {
+            background-image:
+                linear-gradient(
+                    135deg,
+                    #ea580c,
+                    #facc15
+                );
+        }
+
+        .conteudo-card {
+            padding: 22px;
+        }
+
+        .categoria {
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .conteudo-card h3 {
+            margin: 10px 0;
+            font-size: 21px;
+        }
+
+        .conteudo-card p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .botao:hover {
+            background-color: #7c3aed;
+            transform: scale(1.05);
+        }
+
+
+        /* =====================================
+           6. COLUMNS: TEXTO EM COLUNAS
+        ===================================== */
+
+        .texto-colunas {
+            columns: 2;
+            column-gap: 35px;
+            column-rule: 1px solid #cbd5e1;
+        }
+
+        .texto-colunas p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+
+        /* =====================================
+           7. DEMONSTRAÇÃO DE GRADIENTES
+        ===================================== */
+
+        .gradientes {
+            display: grid;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+        .gradiente {
+            min-height: 150px;
+            border-radius: 14px;
+            padding: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-weight: bold;
+            text-align: center;
+
+            box-shadow: 0 5px 15px #0002;
+        }
+
+        .linear {
+            background: linear-gradient(
+                to right,
+                #2563eb,
+                #9333ea
+            );
+        }
+
+        .radial {
+            background: radial-gradient(
+                circle,
+                #fef08a,
+                #f97316,
+                #991b1b
+            );
+        }
+
+        .conico {
+            background: conic-gradient(
+                #ef4444,
+                #facc15,
+                #22c55e,
+                #3b82f6,
+                #9333ea,
+                #ef4444
+            );
+        }
+
+
+        /* =====================================
+           8. MÚLTIPLOS BACKGROUNDS
+        ===================================== */
+
+        .background-duplo {
+            min-height: 220px;
+            border-radius: 16px;
+            padding: 35px;
+            color: white;
+
+            background-image:
+                radial-gradient(
+                    circle at top right,
+                    rgba(255, 255, 255, 0.4),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #2563eb,
+                    #7c3aed
+                );
+
+            background-repeat:
+                no-repeat,
+                no-repeat;
+
+            background-position:
+                right top,
+                center;
+
+            background-size:
+                cover,
+                cover;
+
+            box-shadow: 0 8px 25px #0002;
+        }
+
+
+        /* =====================================
+           9. ANIMAÇÕES COM KEYFRAMES
+        ===================================== */
+
+        .caixa-animada {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #9333ea
+            );
+
+            animation: mover 3s ease-in-out
+                       infinite alternate;
+        }
+
+        @keyframes mover {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(180px);
+            }
+        }
+
+        .entrada {
+            animation: aparecer 1s ease-out;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =====================================
+           10. EXEMPLO DE SOMBRAS
+        ===================================== */
+
+        .exemplo-sombra {
+            display: grid;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+        .sombra {
+            background: white;
+            padding: 30px 15px;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .sombra-normal {
+            box-shadow: 5px 5px 12px #0003;
+        }
+
+        .sombra-colorida {
+            box-shadow: 0 0 18px #2563eb66;
+        }
+
+        .sombra-interna {
+            box-shadow: inset 0 0 12px #0003;
+        }
+
+
+        /* =====================================
+           11. RODAPÉ
+        ===================================== */
+
+        .rodape {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+
+        /* =====================================
+           12. RESPONSIVIDADE
+        ===================================== */
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .gradientes {
+                grid-template-columns: 1fr;
+            }
+
+            .exemplo-sombra {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+            section {
+                padding: 35px 0;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .texto-colunas {
+                columns: 1;
+            }
+
+            .menu {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .background-duplo {
+                padding: 25px;
+            }
+
+            .caixa-animada {
+                animation-duration: 2s;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .caixa-animada {
+                    animation: none;
+                }
+            }
+        }
+
+
+        /* =====================================
+           13. PAGED MEDIA: IMPRESSÃO
+        ===================================== */
+
+        @page {
+            size: A4 portrait;
+            margin: 2cm;
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                font-size: 11pt;
+            }
+
+            .menu,
+            .botao {
+                display: none;
+            }
+
+            .cabecalho {
+                background: white;
+                color: black;
+                padding: 20px 0;
+            }
+
+            section {
+                padding: 20px 0;
+            }
+
+            .card,
+            .background-duplo,
+            .gradiente,
+            .sombra {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .cards,
+            .gradientes,
+            .exemplo-sombra {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card:hover {
+                transform: none;
+            }
+
+            .caixa-animada {
+                animation: none;
+            }
+
+            .rodape {
+                background: white;
+                color: black;
+            }
+
+            h1, h2, h3 {
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="site">
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho entrada">
+        <div class="container">
+            <h1>CSS Moderno</h1>
+            <p>
+                Aprender CSS através de exemplos
+                práticos e organizados.
+            </p>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <a href="#cards">Cards</a>
+        <a href="#columns">Columns</a>
+        <a href="#gradientes">Gradientes</a>
+        <a href="#backgrounds">Backgrounds</a>
+        <a href="#animacoes">Animações</a>
+        <a href="#sombras">Sombras</a>
+    </nav>
+
+    <main>
+
+        <!-- CARDS -->
+        <section id="cards">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Cards Modernos
+                </h2>
+
+                <p class="descricao">
+                    Cards com sombras, cantos arredondados,
+                    gradientes e efeitos hover.
+                </p>
+
+                <div class="cards">
+
+                    <article class="card">
+                        <div class="imagem-card">
+                            HTML
+                        </div>
+
+                        <div class="conteudo-card">
+                            <span class="categoria">
+                                Estrutura
+                            </span>
+
+                            <h3>HTML</h3>
+
+                            <p>
+                                HTML organiza títulos,
+                                parágrafos, imagens e
+                                outros elementos da página.
+                            </p>
+
+                            <a href="#columns"
+                               class="botao">
+                                Saber mais
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="imagem-card imagem-verde">
+                            CSS
+                        </div>
+
+                        <div class="conteudo-card">
+                            <span class="categoria">
+                                Estilização
+                            </span>
+
+                            <h3>CSS</h3>
+
+                            <p>
+                                CSS controla cores, sombras,
+                                layouts, transições e
+                                animações.
+                            </p>
+
+                            <a href="#gradientes"
+                               class="botao">
+                                Saber mais
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="imagem-card imagem-laranja">
+                            JS
+                        </div>
+
+                        <div class="conteudo-card">
+                            <span class="categoria">
+                                Interactividade
+                            </span>
+
+                            <h3>JavaScript</h3>
+
+                            <p>
+                                JavaScript permite adicionar
+                                interactividade e lógica
+                                às páginas web.
+                            </p>
+
+                            <a href="#animacoes"
+                               class="botao">
+                                Saber mais
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- COLUMNS -->
+        <section id="columns">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Texto em Colunas
+                </h2>
+
+                <div class="texto-colunas">
+                    <p>
+                        HTML é uma linguagem de marcação
+                        utilizada para estruturar páginas
+                        web. Permite inserir títulos,
+                        parágrafos, tabelas, formulários
+                        e imagens.
+                    </p>
+
+                    <p>
+                        CSS é uma linguagem de estilos
+                        utilizada para definir a aparência
+                        dos elementos HTML. Podemos alterar
+                        cores, margens, espaçamentos,
+                        sombras e dimensões.
+                    </p>
+
+                    <p>
+                        O JavaScript permite criar
+                        funcionalidades interactivas,
+                        como menus dinâmicos, validação
+                        de formulários e outros efeitos.
+                    </p>
+
+                    <p>
+                        Combinando estas três tecnologias,
+                        podemos desenvolver páginas web
+                        organizadas, atractivas e adaptadas
+                        a diferentes dispositivos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- GRADIENTES -->
+        <section id="gradientes">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Gradientes CSS
+                </h2>
+
+                <p class="descricao">
+                    Linear, radial e cónico.
+                </p>
+
+                <div class="gradientes">
+
+                    <div class="gradiente linear">
+                        Linear Gradient
+                    </div>
+
+                    <div class="gradiente radial">
+                        Radial Gradient
+                    </div>
+
+                    <div class="gradiente conico">
+                        Conic Gradient
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MULTIPLOS BACKGROUNDS -->
+        <section id="backgrounds">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Múltiplos Backgrounds
+                </h2>
+
+                <div class="background-duplo">
+                    <h2>Fundos Combinados</h2>
+
+                    <p>
+                        Este elemento combina um gradiente
+                        radial com um gradiente linear
+                        usando a propriedade background-image.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TRANSICOES E ANIMACOES -->
+        <section id="animacoes">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Transições e Animações
+                </h2>
+
+                <p class="descricao">
+                    Passa o rato sobre os cards e botões
+                    para observar os efeitos.
+                </p>
+
+                <h3>Exemplo de movimento automático</h3>
+
+                <div style="padding: 20px 0;
+                            overflow: hidden;">
+                    <div class="caixa-animada"></div>
+                </div>
+
+                <p>
+                    A animação utiliza @keyframes,
+                    translateX, duração e repetição.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- SOMBRAS -->
+        <section id="sombras">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Sombras CSS
+                </h2>
+
+                <div class="exemplo-sombra">
+
+                    <div class="sombra sombra-normal">
+                        <h3>Sombra Normal</h3>
+                        <p>box-shadow</p>
+                    </div>
+
+                    <div class="sombra sombra-colorida">
+                        <h3>Sombra Colorida</h3>
+                        <p>box-shadow</p>
+                    </div>
+
+                    <div class="sombra sombra-interna">
+                        <h3>Sombra Interna</h3>
+                        <p>inset</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPE -->
+    <footer class="rodape">
+        <p>
+            Projecto de aprendizagem de CSS
+            &copy; 2026
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>

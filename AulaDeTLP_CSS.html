@@ -277,7 +277,7 @@
 
             color: white;
             font-weight: bold;
-            font-align: center;
+            text-align: center;
 
             box-shadow: 0 5px 15px #0002;
         }
@@ -553,7 +553,7 @@
     <!-- MENU -->
 
     <nav class="menu">
-        a href="#cards">Cards</a>
+        <a href="#cards">Cards</a>
         <a href="#columns">Columns</a>
         <a href="#gradientes">Gradientes</a>
         <a href="#backgrounds">Backgrounds</a>
@@ -587,15 +587,167 @@
 
                     </article>
 
-                    <article ></article>
+
+                    <article class="card">
+                        <div class="imagem-card imagem-verde">CSS</div>
+
+                        <div class="conteudo-card">
+                            <span class="categoria">Estilizacao</span>
+                            
+                            <h3>CSS</h3>
+
+                            <p>O CSS controla cores, sombras, layouts, transicoes e animacoes.</p>
+
+                            <a href="#gradientes" class="botao">Saber mais</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="imagem-card imagem-laranja">JS</div>
+
+                        <div class="conteudo-card">
+                            <span class="categoria">Interactividade</span>
+
+                            <h3>JavaScript</h3>
+
+                            <p>JavaScript permite adicionar interactividade e logica as paginas web.</p>
+
+                            <a href="#animacoes" class="botao">Saber mais</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+            <!-- COLUMNS -->
+
+            <section id="columns">
+                <div class="container">
+                    <h2 class="titulo-seccao">Texto em colunas</h2>
+
+                    <div class="texto-colunas">
+                        <p>HTML e uma linguagem de marcacao utilizada para estructurar paginas web. Permite inserir titulos, paragrafos, tabelas, formularios e imagens.</p>
+
+                        <p>CSS e uma linguagem de estilos utilizada para definir a aparencia dos elementos HTML. Podemos alternar cores, margens, espacamentos, sombras e dimensoes.</p>
+
+                        <p>O JavasScript permite criar funcionalidades interactivas, como menus dinamicos, validacao de formularios e outros efeitos.</p>
+
+                        <p>Combinando estas tres tecnologias, podemos desenvolver paginas web organizadas, atractivas e adaptadas a diferentes dispositivos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GRADIENTES -->
+
+            <section id="gradientes">
+                <div class="container">
+                    <h2 class="titulo-seccao">Gradientes</h2>
+
+                    <p class="descricao">Linear, radial e conico.</p>
+
+                    <div class="gradientes">
+                        <div class="gradiente linear">Linear Gradient</div>
+                        
+
+                        <div class="gradiente radial">Radial Gradient</div>
+
+                        <div class="gradiente conico">Conic Gradient</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MULTIPLOS BACKGROUNDS -->
+
+            <section id="backgrounds">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Múltiplos Backgrounds
+                </h2>
+
+                <div class="background-duplo">
+                    <h2>Fundos Combinados</h2>
+
+                    <p>
+                        Este elemento combina um gradiente
+                        radial com um gradiente linear
+                        usando a propriedade background-image.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TRANSICOES E ANIMACOES -->
+        <section id="animacoes">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Transições e Animações
+                </h2>
+
+                <p class="descricao">
+                    Passa o rato sobre os cards e botões
+                    para observar os efeitos.
+                </p>
+
+                <h3>Exemplo de movimento automático</h3>
+
+                <div style="padding: 20px 0;
+                            overflow: hidden;">
+                    <div class="caixa-animada"></div>
+                </div>
+
+                                <p>
+                    A animação utiliza @keyframes,
+                    translateX, duração e repetição.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- SOMBRAS -->
+        <section id="sombras">
+            <div class="container">
+
+                <h2 class="titulo-seccao">
+                    Sombras CSS
+                </h2>
+
+                <div class="exemplo-sombra">
+
+                    <div class="sombra sombra-normal">
+                        <h3>Sombra Normal</h3>
+                        <p>box-shadow</p>
+                    </div>
+
+                    <div class="sombra sombra-colorida">
+                        <h3>Sombra Colorida</h3>
+                        <p>box-shadow</p>
+                    </div>
+
+                    <div class="sombra sombra-interna">
+                        <h3>Sombra Interna</h3>
+                        <p>inset</p>
+                    </div>
 
                 </div>
             </div>
         </section>
+
     </main>
 
-    </div>
+        <!-- RODAPE -->
+    <footer class="rodape">
+        <p>
+            Projecto de aprendizagem de CSS
+            &copy; 2026
+        </p>
+    </footer>
 
+</div>
+
+    </div>
     
 </body>
 
