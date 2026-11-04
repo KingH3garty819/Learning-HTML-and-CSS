@@ -200,11 +200,12 @@
         }
 
         .imagem-laranja{
-            linear-gradient(
-                135deg,
-                #ea580c,
-                #facc15
-            );
+            background-image:
+                linear-gradient(
+                    135deg,
+                    #ea580c,
+                    #facc15
+                );
         }
 
         .conteudo-card{
@@ -385,12 +386,215 @@
 
         /*EXEMPLO DE SOMBRAS*/
 
+        .exemplo-sombra{
+            display: grid;
+            grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+        .sombra{
+            background: white;
+            padding: 30px 15px;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .sombra-normal{
+            box-shadow: 5px 5px 12px black;
+        }
+
+        .sombra-colorida{
+            box-shadow: 0 0 18px #2563eb66;
+        }
+
+        .sombra-interna{
+            box-shadow: inset 0 0 12px black;
+        }
+
+        /*RODAPE*/
+
+        .rodape{
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        /*RESPONSIVIDADE*/
+
+        @media (max-width: 800px){
+            .cards{
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .gradientes{
+                grid-template-columns: 1fr;
+            }
+
+            .exemplo-sombra{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px){
+            section{
+                padding: 35px 0;
+            }
+
+            .cards{
+                grid-template-columns: 1fr;
+            }
+
+            .texto-colunas{
+                columns: 1;
+            }
+
+            .menu{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .background-duplo{
+                padding: 25px;
+            }
+
+            .caixa-animada{
+                animation-duration: 2s;
+            }
+
+            @media (prefers-reduced-motion: reduced){
+                .caixa-animada{
+                    animation: none;
+                }
+            }
+        }
+
+        /*PAGED MEDIA: IMPRESSÃO*/
+
+        @page{
+            size: A4 portrait;
+            margin: 2cm;
+        }
+
+        @media print{
+            body{
+                background: white;
+                color: black;
+                font-size: 11pt;
+            }
+
+            .menu,
+            .botao{
+                display: none;
+            }
+
+            cabecalho{
+                background: white;
+                color: black;
+                padding: 20px 0;
+            }
+
+            section{
+                padding: 20px 0;
+            }
+            
+            .card,
+            .back1ground-duplo,
+            .gradiente,
+            .sombra{
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .cards,
+            .gradientes,
+            .exemplo-sombra{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card:hover{
+                transform: none;
+            }
+
+            .caixa-animada{
+                animation: none;
+            }
+
+            .rodape{
+                background: white;
+                color: black;
+            }
+
+            h1, h2, h3{
+                break-after: avoid;
+            }
+        }
+
     </style>
 
 </head>
 
 <body>
 
+    <div class="site">
+
+            <!-- CABECALHO -->
+
+    <header class="cabecalho entrada">
+        <div class="container">
+            <h1>CSS Moderno</h1>
+            <p>Aprender CSS atraves de exemplos práticos e organizados.</p>
+        </div>
+    </header>
+
+    <!-- MENU -->
+
+    <nav class="menu">
+        a href="#cards">Cards</a>
+        <a href="#columns">Columns</a>
+        <a href="#gradientes">Gradientes</a>
+        <a href="#backgrounds">Backgrounds</a>
+        <a href="#animacoes">Animações</a>
+        <a href="#sombras">Sombras</a>
+    </nav>
+
+    <main>
+        <!-- CARDS -->
+
+        <section id="cards">
+            <div class="container">
+                <h2 class="tirulo-seccao">Cards Modernos</h2>
+
+                <p class="descricao">Cards com sombras, cantos arrendondados, gradientes e efitos hover.</p>
+                
+                <div class="cards">
+
+                    <article class="cards">
+                        <div class="imagem-card">HTML</div>
+
+                        <div class="conteudo-card">
+                            <span class="categoria">Estructura</span>
+
+                            <h3>HTML</h3>
+
+                            <p>HTML organiza titulos, paragrafos, imagens e outros elementos da pagina.</p>
+
+                            <a href="#columns" class="botao">Saber mais</a>
+                        </div>
+
+                    </article>
+
+                    <article ></article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    </div>
 
     
 </body>
